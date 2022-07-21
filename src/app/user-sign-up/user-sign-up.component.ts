@@ -4,11 +4,11 @@ import { UserService } from '../user.service';
 import { User } from '../user';
 
 @Component({
-  selector: 'app-user-form',
-  templateUrl: './user-form.component.html',
-  styleUrls: ['./user-form.component.css']
+  selector: 'app-user-sign-up',
+  templateUrl: './user-sign-up.component.html',
+  styleUrls: ['./user-sign-up.component.css']
 })
-export class UserFormComponent {
+export class UserSignUpComponent {
 
   user: User;
 
