@@ -5,14 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { UserFormComponent } from './user-form/user-form.component';
 import { UserService } from './user.service';
+import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserFormComponent
+    UserSignUpComponent
   ],
   imports: [
     BrowserModule,
