@@ -24,6 +24,6 @@ export class UserSignUpComponent {
   }
 
   gotoUserList() {
-    this.router.navigate(['/users']);
+    this.router.navigate(['/user-home']);
   }
 }

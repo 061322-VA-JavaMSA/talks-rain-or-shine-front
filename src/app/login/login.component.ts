@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     */
    this.authServ.login(this.usernameInput, this.passwordInput).subscribe(
     () => {
-      this.router.navigate(['']);
+      this.router.navigate(['user-home']);
     },
     err => {
       this.errorMessage = 'Unable to login.';
