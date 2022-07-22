@@ -1,8 +1,12 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <!-- TO-DO: Add logo image that navigates to home page -->
-        <a class="navbar-brand" routerLink="">
-            <img src="" style="height: 2.5em; padding: .5em;">
+        <a *ngIf="!loggedInUser" class="navbar-brand" routerLink="">
+            <!-- <img src="" style="height: 2.5em; padding: .5em;"> -->
+            LOGO
+        </a>
+        <a *ngIf="loggedInUser" class="navbar-brand" routerLink="/user-home">
+            <!-- <img src="" style="height: 2.5em; padding: .5em;"> -->
+            LOGO
         </a>
         <ul class="navbar-nav navbar-right" id="nav-right">
             <li *ngIf="!loggedInUser" class="nav-item">
