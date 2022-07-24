@@ -1,10 +1,28 @@
 import { Component } from '@angular/core';
+import { User } from './user';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+// export class AppComponent {
+
+//   title: string;
+
+//   constructor() {
+//     this.title = 'Users';
+//   }
+
 export class AppComponent {
-  title = 'talks-rain-or-shine';
+  title = 'Talks Rain or Shine!';
+
+  principal: User;
+
+  constructor(private authServ: AuthService){}
+
+  getPrincipal(){
+    this.principal = this.authServ.principal;
+  }
 }
