@@ -8,6 +8,11 @@
             <!-- <img src="" style="height: 2.5em; padding: .5em;"> -->
             LOGO
         </a>
+        <ul *ngIf="loggedInUser" class="navbar-nav me-auto" id="nav-left">
+            <li *ngIf="loggedInUser.role === 1" class="nav-item">
+                <a class="nav-link" routerLink="users">Users</a>
+            </li>
+        </ul>
         <ul class="navbar-nav navbar-right" id="nav-right">
             <li *ngIf="!loggedInUser" class="nav-item">
                 <a class="nav-link" routerLink="login">Login</a>
