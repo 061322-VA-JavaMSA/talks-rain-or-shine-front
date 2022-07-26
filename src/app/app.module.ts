@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 import { HomeComponent } from './home/home.component';
+import { BlogsviewComponent } from './blogsview/blogsview.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     NavbarComponent,
     UserHomeComponent,
-    HomeComponent
+    HomeComponent,
+    BlogsviewComponent
   ],
   imports: [
     BrowserModule,
