@@ -6,6 +6,7 @@ import { UserHomeComponent } from './user-home/user-home.component';
 import { LoginComponent } from './login/login.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
+import { BlogComponent } from './blog/blog.component';
 
 const routes:Routes =[
   {path:'', component:HomeComponent},
@@ -13,6 +14,7 @@ const routes:Routes =[
   {path:'users', component:UserListComponent},
   {path:'sign-up', component:UserSignUpComponent},
   {path: 'login', component:LoginComponent},
+  {path:'blog', component:BlogComponent},
 ];
 
 
