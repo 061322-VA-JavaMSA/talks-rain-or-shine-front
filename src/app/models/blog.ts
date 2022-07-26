@@ -7,5 +7,4 @@ export class Blog {
     userId: number ;
     timeCreated: Date;
 
-
 }
