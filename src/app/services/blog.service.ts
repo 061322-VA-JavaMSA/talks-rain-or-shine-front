@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Blog } from './blog';
+import { Blog } from '../models/blog';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -11,8 +11,6 @@ import { AuthService } from './auth.service';
 })
 export class BlogService {
 
-
-
   constructor(private http:HttpClient , private auth:AuthService) { }
 
   getBlogs():Observable<Blog[]>{
@@ -22,5 +20,9 @@ export class BlogService {
       )
     );
 
+  }
+
+  public delete(id: number): Observable<any> {
+    return this.http.delete(`${environment.apiUrl}/blogs/${id}`, {responseType: 'text'});
   }
 }

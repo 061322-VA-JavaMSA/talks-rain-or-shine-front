@@ -4,14 +4,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { UserService } from './user.service';
-import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
-import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { UserHomeComponent } from './user-home/user-home.component';
-import { HomeComponent } from './home/home.component';
-import { BlogsviewComponent } from './blogsview/blogsview.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { UserService } from './services/user.service';
+import { UserSignUpComponent } from './components/user-sign-up/user-sign-up.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { UserHomeComponent } from './components/user-home/user-home.component';
+import { HomeComponent } from './components/home/home.component';
+import { BlogsviewComponent } from './components/blogsview/blogsview.component';
+import { BlogService } from './services/blog.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { BlogsviewComponent } from './blogsview/blogsview.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
