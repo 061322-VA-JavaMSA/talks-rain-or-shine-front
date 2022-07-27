@@ -7,4 +7,5 @@ export class User {
     password: string;
     location: number;
     role: number;
+  
 }
