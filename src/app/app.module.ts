@@ -13,6 +13,8 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
 import { HomeComponent } from './components/home/home.component';
 import { BlogsviewComponent } from './components/blogsview/blogsview.component';
 import { BlogService } from './services/blog.service';
+import { WidgetComponent } from './components/widget/widget.component';
+import { WeatherService } from './services/weather.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { BlogService } from './services/blog.service';
     NavbarComponent,
     UserHomeComponent,
     HomeComponent,
-    BlogsviewComponent
+    BlogsviewComponent,
+    WidgetComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import { BlogService } from './services/blog.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService, BlogService],
+  providers: [UserService, BlogService, WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
