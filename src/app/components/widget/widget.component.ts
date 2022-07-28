@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { WeatherService } from 'src/app/services/weather.service';
 
+
+
 @Component({
   selector: 'app-widget',
   templateUrl: './widget.component.html',
@@ -22,4 +24,15 @@ export class WidgetComponent implements OnInit {
     });
   }
 
+  // getIcon() {
+  //   this.weatherService.getWeatherData().subscribe(data => {
+  //     this.condition = data.current.condition.text;
+  //     switch(this.condition) {
+  //       case "Partly coudy":
+  //         return 
+  //     }
+  //   });
+    
 }
+
+

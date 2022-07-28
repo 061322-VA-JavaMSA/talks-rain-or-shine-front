@@ -1,17 +1,47 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <div class="widget-49" *ngIf="data !== undefined">
-            <div>
-                <span>{{ data.location.name }}</span>
-                <br />
-                <span>{{ data.location.localtime }}</span>
+    <div class="container py-5" *ngIf="data !== undefined">
+  
+      <div class="row d-flex justify-content-center align-items-center ">
+        <div class="col-md-8 col-lg-6 col-xl-4">
+  
+          <div class="card" style="color: #4B515D; border-radius: 35px;">
+            <div class="card-body p-4">
+  
+              <div class="d-flex">
+                <h6 class="flex-grow-1">{{ data.location.name }}</h6>
+                <h6>{{ data.location.localtime }}</h6>
+              </div>
+  
+              <div class="d-flex flex-column text-center mt-5 mb-4">
+                <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> {{ data.current.temp_f }} </h6>
+                <span class="small" style="color: #868B94">{{ data.current.condition.text }}</span>
+                <span class="small" style="color: #868B94">Feels like: {{ data.current.feelslike_f }}</span>
+              </div>
+  
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1" style="font-size: 1rem;">
+                  <div><span class="ms-1"> <h6>{{ data.location.tz_id }}</h6> </span>
+                  </div>
+                </div>
+                <div>
+                    <container-element [ngSwitch]="data.current.condition.text">
+                        <some-element *ngSwitchCase="Partyly cloudy"><img src = "../../../assets/weatherIcon/cloudy.png" width="100px"></some-element>
+                        <some-element *ngSwitchCase="Sunny"><img src = "../../../assets/weatherIcon/sunny.png" width="100px"></some-element>
+                        <some-element *ngSwitchCase="Clear"><img src = "../../../assets/weatherIcon/sunny.png" width="100px"></some-element>
+                        <some-element *ngSwitchCase="Light rain"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></some-element>
+                        <some-element *ngSwitchCase="Moderate rain"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></some-element>
+                        <some-element *ngSwitchCase="Heavy rain"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></some-element>
+                        <some-element *ngSwitchCase="Overcast"><img src = "../../../assets/weatherIcon/overcast.png" width="100px"></some-element>
+                        <some-element *ngSwitchCase="Snow"><img src = "../../../assets/weatherIcon/snow.png" width="100px"></some-element>
+                        <some-element *ngSwitchCase="Moderate or heavy rain with thunder"><img src = "../../../assets/weatherIcon/thunder.png" width="100px"></some-element>
+                        <some-element *ngSwitchDefault><img src = "../../../assets/weatherIcon/sunny.png" width="100px"></some-element>
+                      </container-element>
+               
+                </div>
+              </div>
+  
             </div>
+          </div>
+  
         </div>
-        <ul class="navbar-nav">
-            <li class="nav-item"><span>Time Zone: {{ data.location.tz_id }}</span></li>
-            <li class="nav-item"><span>Condition: {{ data.current.condition.text }}</span></li>
-            <li class="nav-item"><span>Temperature: {{ data.current.temp_f }}</span></li>
-            <li class="nav-item"><span>Feels Like: {{ data.current.feelslike_f }}</span></li>
-        </ul>
+      </div>
     </div>
-</nav>
