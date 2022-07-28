@@ -21,6 +21,7 @@ export class WidgetComponent implements OnInit {
   getWeather(){
     this.weatherService.getWeatherData().subscribe(data => {
       this.data = data;
+      console.log(data.current.condition.text);
     });
   }
 

@@ -22,21 +22,22 @@
                   <div><span class="ms-1"> <h6>{{ data.location.tz_id }}</h6> </span>
                   </div>
                 </div>
-                <div>
-                    <container-element [ngSwitch]="data.current.condition.text">
-                        <some-element *ngSwitchCase="Partyly cloudy"><img src = "../../../assets/weatherIcon/cloudy.png" width="100px"></some-element>
-                        <some-element *ngSwitchCase="Sunny"><img src = "../../../assets/weatherIcon/sunny.png" width="100px"></some-element>
-                        <some-element *ngSwitchCase="Clear"><img src = "../../../assets/weatherIcon/sunny.png" width="100px"></some-element>
-                        <some-element *ngSwitchCase="Light rain"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></some-element>
-                        <some-element *ngSwitchCase="Moderate rain"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></some-element>
-                        <some-element *ngSwitchCase="Heavy rain"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></some-element>
-                        <some-element *ngSwitchCase="Overcast"><img src = "../../../assets/weatherIcon/overcast.png" width="100px"></some-element>
-                        <some-element *ngSwitchCase="Snow"><img src = "../../../assets/weatherIcon/snow.png" width="100px"></some-element>
-                        <some-element *ngSwitchCase="Moderate or heavy rain with thunder"><img src = "../../../assets/weatherIcon/thunder.png" width="100px"></some-element>
-                        <some-element *ngSwitchDefault><img src = "../../../assets/weatherIcon/sunny.png" width="100px"></some-element>
-                      </container-element>
                
-                </div>
+                    <div [ngSwitch]="data.current.condition.text">
+                        <div *ngSwitchCase="'Partly cloudy'"><img src = "../../../assets/weatherIcon/cloudy.png" width="100px"></div>
+                        <div *ngSwitchCase="'Sunny'"><img src = "../../../assets/weatherIcon/sunny.png" width="100px"></div>
+                        <div *ngSwitchCase="'Clear'"><img src = "../../../assets/weatherIcon/sunny.png" width="100px"></div>
+                        <div *ngSwitchCase="'Light rain'"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></div>
+                        <div *ngSwitchCase="'Moderate rain'"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></div>
+                        <div *ngSwitchCase="'Heavy rain'"><img src = "../../../assets/weatherIcon/rainy.png" width="100px"></div>
+                        <div *ngSwitchCase="'Overcast'"><img src = "../../../assets/weatherIcon/overcast.png" width="100px"></div>
+                        <div *ngSwitchCase="'Snow'"><img src = "../../../assets/weatherIcon/snow.png" width="100px"></div>
+                        <div *ngSwitchCase="'Moderate or heavy rain with thunder'"><img src = "../../../assets/weatherIcon/thunder.png" width="100px"></div>
+                        <div *ngSwitchCase="'Patchy light rain with thunder'"><img src = "../../../assets/weatherIcon/thunder.png" width="100px"></div>
+                        <div *ngSwitchDefault><img src = "../../../assets/weatherIcon/meter.png" width="100px"></div>
+                    </div>
+               
+               
               </div>
   
             </div>
