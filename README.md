@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.4.
 
+## Description
+
+Talks Rain or Shine is a web application that allows users to make blog posts about their day while having access to their current location's weather information. Users can sign up with new accounts, log in, view their location's weather information, and create blog posts while viewing blog posts made by other users. Users can edit and delete their blog posts and update their profile information. Moderators can view all blog posts and delete blogs that violate the platform's terms of agreement.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
