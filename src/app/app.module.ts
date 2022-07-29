@@ -17,6 +17,7 @@ import { WidgetComponent } from './components/widget/widget.component';
 import { WeatherService } from './services/weather.service';
 import { NewBlogComponent } from './components/new-blog/new-blog.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
+import { BlogEditFormComponent } from './blog-editform/blog-editform.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BlogFormComponent } from './components/blog-form/blog-form.component';
     BlogsviewComponent,
     WidgetComponent,
     NewBlogComponent,
-    BlogFormComponent
+    BlogFormComponent,
+    BlogEditFormComponent
   ],
   imports: [
     BrowserModule,

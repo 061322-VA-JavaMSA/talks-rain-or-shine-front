@@ -32,7 +32,15 @@ export class BlogService {
     return this.http.post<Blog>(this.blogUrl, blog);
   }
 
-  
+  public edit(blog: Blog, id: string){
+    let idNum : number = id as unknown as number;
+    let date = new Date();
+    blog.userId = idNum;
+    blog.timeCreated = date;
+    
+   return this.http.put<Blog>(this.blogUrl, blog);
+    
+  }
 
   public delete(id: number): Observable<any> {
     return this.http.delete(`${environment.apiUrl}/blogs/${id}`, {responseType: 'text'});

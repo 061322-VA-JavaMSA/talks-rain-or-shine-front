@@ -7,6 +7,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserSignUpComponent } from './components/user-sign-up/user-sign-up.component';
 import { WidgetComponent } from './components/widget/widget.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
+import { BlogEditFormComponent } from './blog-editform/blog-editform.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,7 +16,9 @@ const routes: Routes = [
   { path: 'sign-up', component: UserSignUpComponent },
   { path: 'login', component: LoginComponent },
   { path: 'weather', component: WidgetComponent},
-  {path: 'blog-form', component: BlogFormComponent}
+  {path: 'blog-form', component: BlogFormComponent},
+  {path: 'blog-edit-form', component:BlogEditFormComponent}
+
 ];
 
 @NgModule({
