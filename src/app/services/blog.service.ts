@@ -4,7 +4,6 @@ import { Blog } from '../models/blog';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -26,9 +25,10 @@ export class BlogService {
 
   }
   public save(blog: Blog, id: string) {
-let idNum : number = id as unknown as number;
+     let idNum : number = id as unknown as number;
+     let date = new Date();
      blog.userId = idNum;
-
+     blog.timeCreated = date;
     return this.http.post<Blog>(this.blogUrl, blog);
   }
 

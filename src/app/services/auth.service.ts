@@ -44,6 +44,8 @@ export class AuthService {
     );
   }
 
+
+
   logout() {
     this.principal = null;
     this.token = '';
