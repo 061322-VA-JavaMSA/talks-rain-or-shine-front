@@ -15,6 +15,8 @@ import { BlogsviewComponent } from './components/blogsview/blogsview.component';
 import { BlogService } from './services/blog.service';
 import { WidgetComponent } from './components/widget/widget.component';
 import { WeatherService } from './services/weather.service';
+import { NewBlogComponent } from './new-blog/new-blog.component';
+import { BlogFormComponent } from './blog-form/blog-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { WeatherService } from './services/weather.service';
     UserHomeComponent,
     HomeComponent,
     BlogsviewComponent,
-    WidgetComponent
+    WidgetComponent,
+    NewBlogComponent,
+    BlogFormComponent
   ],
   imports: [
     BrowserModule,
