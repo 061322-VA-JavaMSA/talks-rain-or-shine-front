@@ -31,7 +31,7 @@ export class WeatherService {
 
   getWeatherData():Observable<any>{
     this.user = JSON.parse(sessionStorage.getItem('principal')) as User;
-    const url = `http://localhost:8080/weather?location=${this.user.location}`;
+    const url = `http://localhost:8085/weather?location=${this.user.location}`;
     return this.http.get(url).pipe(
       map(this.extractData),
       catchError(this.handleError)

@@ -1,12 +1,13 @@
 <h2> All Blogs</h2>
+
 <div class="card my-6">
     <div class="card-body">
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">BlogID</th>
-            <th scope="col">Body</th>
-            <th scope="col">Username</th>
+            <th scope="col">Feed</th>
+            <th scope="col">Usernedame</th>
             <th scope="col">PostedDate</th>
             <th *ngIf="loggedInUser.role === 1" scope="col">Delete</th>
           </tr>
