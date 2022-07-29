@@ -3,6 +3,7 @@ import { Blog } from 'src/app/models/blog';
 import { BlogService } from 'src/app/services/blog.service';
 import { User } from 'src/app/models/user';
 import { DatePipe, formatDate } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blogsview',
@@ -13,11 +14,12 @@ export class BlogsviewComponent implements OnInit {
   
   blogs:Blog[];
   @Input() loggedInUser: User;
-
-  constructor(private blogService:BlogService) { }
+ @Input() blogBody: string;
+  constructor(private blogService:BlogService, private router: Router) { }
   
   ngOnInit(): void {
     this.getBlogs();
+    console.log(this.blogBody);
   }
 
   getBlogs(){
@@ -31,7 +33,12 @@ export class BlogsviewComponent implements OnInit {
     );
     
   }
+  redirectEditForm(blogBody: string){ 
+    console.log(blogBody);
+    this.router.navigate(['blog-edit-form']);
 
+  }
+  
   deleteBlog(id: number) {
     this.blogService.delete(id).subscribe(
       data => {
