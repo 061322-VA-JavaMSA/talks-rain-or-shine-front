@@ -1,3 +1,6 @@
 .clickable:hover{
   cursor:pointer
 }
+.btn-space {
+  margin-right: 10px;
+}

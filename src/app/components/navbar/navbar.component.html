@@ -10,15 +10,15 @@
         </a>
         <ul *ngIf="loggedInUser" class="navbar-nav me-auto" id="nav-left">
             <li *ngIf="loggedInUser.role === 1" class="nav-item">
-                <button class="btn btn-sm btn-outline-secondary" type="button" routerLink="users" style="height: 5em; padding: 1em">Users</button>
+                <button class="btn btn-outline-secondary btn-space" type="button" routerLink="users" style="height: 5em; padding: 1em">Users</button>
             </li>
         </ul>
         <ul class="navbar-nav navbar-right" id="nav-right">
             <li *ngIf="!loggedInUser" class="nav-item">
-                <a class="nav-link btn btn-outline-secondary" routerLink="login">Login</a>
+                <a class="nav-link btn btn-outline-secondary btn-space" routerLink="login">Login</a>
             </li>
             <li *ngIf="!loggedInUser" class="nav-item">
-                <a class="nav-link btn btn-outline-secondary" routerLink="sign-up">Sign Up</a>
+                <a class="nav-link btn btn-outline-secondary btn-space" routerLink="sign-up">Sign Up</a>
             </li>
             <li *ngIf="loggedInUser" class="nav-item">
                 <a class="nav-link" >{{loggedInUser.username}}</a>

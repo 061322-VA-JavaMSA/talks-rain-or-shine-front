@@ -21,9 +21,10 @@ export class UserSignUpComponent {
 
   onSubmit() {
     this.userService.save(this.user).subscribe(result => this.gotoUserList());
+    window.alert("New Account Created! Please login");
   }
 
   gotoUserList() {
-    this.router.navigate(['/user-home']);
+    this.router.navigate(['']);
   }
 }
