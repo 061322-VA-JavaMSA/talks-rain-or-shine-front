@@ -6,7 +6,8 @@ import { LoginComponent } from './components/login/login.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserSignUpComponent } from './components/user-sign-up/user-sign-up.component';
 import { WidgetComponent } from './components/widget/widget.component';
-import { BlogFormComponent } from './blog-form/blog-form.component';
+import { BlogFormComponent } from './components/blog-form/blog-form.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'user-home', component: UserHomeComponent },

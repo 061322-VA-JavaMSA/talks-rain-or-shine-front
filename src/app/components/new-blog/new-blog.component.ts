@@ -1,8 +1,7 @@
-
   import { Component } from '@angular/core';
   import { ActivatedRoute, Router } from '@angular/router';
-  import { BlogService } from '../services/blog.service';
-  import { Blog } from '../models/blog';
+  import { BlogService } from 'src/app/services/blog.service';
+  import { Blog } from 'src/app/models/blog';
   
   @Component({
     selector: 'app-new-blog',
@@ -10,7 +9,6 @@
     styleUrls: ['./new-blog.component.css']
   })
   export class NewBlogComponent {
-    
   
     blog: Blog;
   
@@ -22,12 +20,7 @@
     }
    
     onSubmit() {
-    
       this.router.navigate(['blog-form']);}
-  
-    //gotoUserList() {
-     // this.router.navigate(['/user-blog']);
-    //}
   }
   
 

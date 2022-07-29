@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Blog } from '../models/blog';
-import { BlogService } from '../services/blog.service';
+import { Blog } from 'src/app/models/blog';
+import { BlogService } from 'src/app/services/blog.service';
 import { NewBlogComponent } from '../new-blog/new-blog.component';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
-import { User } from '../models/user';
+import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/app/models/user';
+
 @Component({
   selector: 'app-blog-form',
   templateUrl: './blog-form.component.html',
