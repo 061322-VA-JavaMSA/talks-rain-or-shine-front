@@ -20,7 +20,7 @@ export class UserService {
     return this.http.post<User>(this.usersUrl, user);
   }
 
-  public edit(user: User) {    
+  public edit(user: User) {
    return this.http.put<User>(this.usersUrl, user);
   }
 }
