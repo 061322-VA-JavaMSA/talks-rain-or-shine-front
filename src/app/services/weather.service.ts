@@ -3,14 +3,17 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { User } from '../models/user';
 import { Observable, throwError} from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
 
+  principal: User;
   user: User;
-  constructor(private http: HttpClient) {
+  
+  constructor(private http: HttpClient, private authService: AuthService) {
   }
 
   private extractData(res: Response) {
@@ -29,15 +32,17 @@ export class WeatherService {
     return throwError(error);
   }
 
-  getWeatherData():Observable<any>{
-    this.user = JSON.parse(sessionStorage.getItem('principal')) as User;
+  getPrincipal(){
+    this.principal = this.authService.principal;
+  }
+
+  getWeatherData():Observable<any> {
+    this.getPrincipal();
+    this.user = this.principal as User;
     const url = `http://localhost:8080/weather?location=${this.user.location}`;
     return this.http.get(url).pipe(
       map(this.extractData),
       catchError(this.handleError)
     )
-    }
   }
-
-  
-
+}

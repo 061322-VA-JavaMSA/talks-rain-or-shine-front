@@ -38,7 +38,6 @@ export class AuthService {
         response => { 
           this.principal = response.body as User;
           this.token =  response.headers.get('Authorization') || '';
-          sessionStorage.setItem('principal', JSON.stringify(this.principal));
         }
       )
     );
