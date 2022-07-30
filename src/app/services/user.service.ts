@@ -19,4 +19,8 @@ export class UserService {
   public save(user: User) {
     return this.http.post<User>(this.usersUrl, user);
   }
+
+  public edit(user: User) {    
+   return this.http.put<User>(this.usersUrl, user);
+  }
 }
