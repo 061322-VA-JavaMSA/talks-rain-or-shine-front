@@ -7,32 +7,33 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'src/app/models/user';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-blog-editform',
   templateUrl: './blog-editform.component.html',
   styleUrls: ['./blog-editform.component.css']
 })
-export class BlogEditFormComponent  {blog: Blog;
+export class BlogEditFormComponent  {
+  blog: Blog;
   principal : User;
   @Input() blogBody: string;
   
   constructor(
     private route: ActivatedRoute, 
     private authServ: AuthService, 
-      private router: Router, 
-        private blogService: BlogService) {
+    private dataService: DataService,
+    private router: Router, 
+    private blogService: BlogService) {
     this.blog = new Blog();
   }
 
   
 
   ngOnInit(): void {
-  this.getPrincipal();
-  console.log(this.principal);
-  console.log(this.blogBody);
-  let id = this.principal.id;
-  console.log(id);
+    this.getPrincipal();
+    this.blog = this.dataService.blog;
+    console.log(this.blog)
   }
    getPrincipal(){
     this.principal = this.authServ.principal;
