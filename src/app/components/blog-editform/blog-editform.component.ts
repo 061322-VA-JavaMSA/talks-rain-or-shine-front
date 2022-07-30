@@ -1,4 +1,3 @@
-
 import { Component, Input, OnInit } from '@angular/core';
 import { Blog } from 'src/app/models/blog';
 import { BlogService } from 'src/app/services/blog.service';
@@ -7,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'src/app/models/user';
-import { DataService } from '../services/data.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-blog-editform',
@@ -26,20 +25,18 @@ export class BlogEditFormComponent  {
     private router: Router, 
     private blogService: BlogService) {
     this.blog = new Blog();
-  }
-
-  
+  }  
 
   ngOnInit(): void {
     this.getPrincipal();
     this.blog = this.dataService.blog;
     console.log(this.blog)
   }
-   getPrincipal(){
+
+  getPrincipal(){
     this.principal = this.authServ.principal;
-   }
+  }
   onSubmit() {
-   //this.blog.id = this.principal.id;
   this.getPrincipal();
   let id = this.principal.id;
     this.blogService.edit(this.blog,id).subscribe(result => this.gotoUserList());

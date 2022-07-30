@@ -17,7 +17,8 @@ import { WidgetComponent } from './components/widget/widget.component';
 import { WeatherService } from './services/weather.service';
 import { NewBlogComponent } from './components/new-blog/new-blog.component';
 import { BlogFormComponent } from './components/blog-form/blog-form.component';
-import { BlogEditFormComponent } from './blog-editform/blog-editform.component';
+import { BlogEditFormComponent } from './components/blog-editform/blog-editform.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BlogEditFormComponent } from './blog-editform/blog-editform.component';
     WidgetComponent,
     NewBlogComponent,
     BlogFormComponent,
-    BlogEditFormComponent
+    BlogEditFormComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

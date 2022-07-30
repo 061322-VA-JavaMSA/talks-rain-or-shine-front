@@ -14,7 +14,6 @@ export class BlogService {
   constructor(private http: HttpClient) {
     this.blogUrl = 'http://localhost:8080/blogs';
   }
- 
 
   getBlogs():Observable<Blog[]>{
     return this.http.get(`${environment.apiUrl}/blogs`).pipe(
@@ -24,15 +23,16 @@ export class BlogService {
     );
 
   }
+  
   public save(blog: Blog, id: string) {
-     let idNum : number = id as unknown as number;
-     let date = new Date();
-     blog.userId = idNum;
-     blog.timeCreated = date;
+    let idNum : number = id as unknown as number;
+    let date = new Date();
+    blog.userId = idNum;
+    blog.timeCreated = date;
     return this.http.post<Blog>(this.blogUrl, blog);
   }
 
-  public edit(blog: Blog, id: string){
+  public edit(blog: Blog, id: string) {
     let idNum : number = id as unknown as number;
     let date = new Date();
     blog.userId = idNum;

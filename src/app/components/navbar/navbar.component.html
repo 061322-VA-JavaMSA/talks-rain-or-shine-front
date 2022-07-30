@@ -21,7 +21,7 @@
                 <a class="nav-link btn btn-outline-secondary btn-space" routerLink="sign-up">Sign Up</a>
             </li>
             <li *ngIf="loggedInUser" class="nav-item">
-                <a class="nav-link" >{{loggedInUser.username}}</a>
+                <a class="nav-link clickable" (click)="redirectUserProfile(loggedInUser)">{{loggedInUser.username}}</a>
             </li>
             <li *ngIf="loggedInUser" class="nav-item">
                 <a class="nav-link clickable" (click)="logout()">Logout</a>
