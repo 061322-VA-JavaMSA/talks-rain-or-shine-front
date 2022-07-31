@@ -5,5 +5,6 @@ export class Blog {
     userId: number ;
     timeCreated: Date;
     timeShow: String;
+    blogUsername: String;
 
 }
