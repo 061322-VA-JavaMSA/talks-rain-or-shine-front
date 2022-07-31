@@ -26,7 +26,7 @@ export class BlogsviewComponent implements OnInit {
     this.blogService.getBlogs().subscribe(
       (blogs)=>{
         this.blogs = blogs;
-        this.blogs.filter((blog) => blog.timeShow = formatDate(blog.timeCreated, 'yyyy-MM-dd hh:mm', 'en_US' ))
+        this.blogs.filter((blog) => blog.timeShow = formatDate(blog.timeCreated, 'MM-dd-yyyy hh:mm', 'en_US' ))
       },
       err=>{
       console.log(err); }

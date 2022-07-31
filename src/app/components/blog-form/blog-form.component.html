@@ -4,7 +4,7 @@
         <div class="col-12 col-lg-9 col-xl-7">
           <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
             <div class="card-body p-4 p-md-5">
-              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Blog Form</h3>
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">What would you like to talk about today?</h3>
                <form (ngSubmit)="onSubmit()" #blogCreate="ngForm"> 
            
                 <!-- ROW 1 BEGIN -->
@@ -12,9 +12,9 @@
                   <div class="col-md-12 mb-4">
   
                     <div class="form-outline">
-                      <input type="text" [(ngModel)]="blog.body" id="body" class="form-control form-control-lg" name="blog" required #body="ngModel" />
+                      <input type="text" [(ngModel)]="blog.body" id="body" class="form-control form-control-lg" name="blog" required #body="ngModel" placeholder="Create a blog"/>
                     <!-- <input type="number" [(ngModel)]=${id} id="userId" class="form-control form-control-lg" name="userId" required #userId="ngModel" /> -->
-                      <label class="form-label" for="blog">Create a Blog</label>
+                      
                     </div>
   
                   </div>
