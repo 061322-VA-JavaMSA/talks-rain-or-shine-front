@@ -24,10 +24,11 @@ export class BlogService {
 
   }
   
-  public save(blog: Blog, id: string) {
+  public save(blog: Blog, id: string, username: string) {
     let idNum : number = id as unknown as number;
     let date = new Date();
     blog.userId = idNum;
+    blog.blogUsername = username;
     blog.timeCreated = date;
     return this.http.post<Blog>(this.blogUrl, blog);
   }

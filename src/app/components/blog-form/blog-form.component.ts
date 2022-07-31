@@ -37,7 +37,8 @@ export class BlogFormComponent{
    //this.blog.id = this.principal.id;
     this.getPrincipal();
     let id = this.principal.id;
-    this.blogService.save(this.blog,id).subscribe(result => this.gotoUserList());
+    let username = this.principal.username;
+    this.blogService.save(this.blog,id,username).subscribe(result => this.gotoUserList());
   }
   gotoUserList() {
       this.router.navigate(['/user-home']);
