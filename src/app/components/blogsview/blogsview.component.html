@@ -4,15 +4,13 @@
     <div class="card-body p-2 p-md-2 gradient-custom rounded mx-auto d-block shadow-lg p-3 mb-5 bg-white rounded"
       style="border-radius: 15px;">
       <div class="card gradient-custom-blog rounded mx-auto shadow-lg p-3 mb-5 bg-white rounded"
-        *ngFor="let blog of blogs">
-        <p>{{ blog.blogUsername }}</p>
-        <p>{{ blog.body }}
-        <p>
-        <p>{{ blog.timeShow }}</p>
-        <p *ngIf="loggedInUser.role === 1 && blog.userId !== loggedInUser.id" (click)="deleteBlog(blog.id)"><i class="fa-solid fa-trash-can"></i></p>
-        <p *ngIf="loggedInUser.id === blog.userId" (click)="redirectEditForm(blog)"><i class="fa-solid fa-pencil"></i>
-        </p>
-        <p *ngIf="loggedInUser.id === blog.userId" (click)="deleteBlog(blog.id)"><i class="fa-solid fa-trash-can"></i>
+        *ngFor="let blog of blogs ">
+        <b>{{ blog.blogUsername }}</b>
+        <p style="font-size:120%;">{{ blog.body }}</p>
+        <p style="text-align:left;"><small>{{ blog.timeShow | date }}</small></p>
+        <p style="text-align:right;" *ngIf="loggedInUser.role === 1 && blog.userId !== loggedInUser.id" (click)="deleteBlog(blog.id)"><i class="fa-solid fa-trash-can"></i></p>
+        <p style="text-align:right;" *ngIf="loggedInUser.id === blog.userId" (click)="redirectEditForm(blog)"><i class="fa-solid fa-pencil"></i></p>
+        <p style="text-align:right;" *ngIf="loggedInUser.id === blog.userId" (click)="deleteBlog(blog.id)"><i class="fa-solid fa-trash-can"></i>
         </p>
       </div>
     </div>
